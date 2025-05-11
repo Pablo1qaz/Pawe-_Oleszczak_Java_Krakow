@@ -1,5 +1,7 @@
 package org.example;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.math.BigDecimal;
 import java.util.*;
 
@@ -12,6 +14,8 @@ import java.util.*;
  * - promotions: opcjonalną listę identyfikatorów promocji, które określają, jakie metody płatności (np. karty promocyjne)
  *   mogą być zastosowane do opłacenia tego zamówienia.
  */
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Order
 {
     public String id;

@@ -1,5 +1,6 @@
-package org.example;
-
+import org.example.Algorithm;
+import org.example.Order;
+import org.example.PaymentMethod;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -91,9 +92,9 @@ public class AlgorithmTest {
         // Oczekiwane wartości:
         // PUNKTY: 100.00, mZysk: 165.00, BosBankrut: 190.00.
         assertNotNull(allocations);
-        assertEquals(new BigDecimal("100.00"), allocations.get("PUNKTY"), "Błędna alokacja dla PUNKTY");
-        assertEquals(new BigDecimal("165.00"), allocations.get("mZysk"), "Błędna alokacja dla mZysk");
-        assertEquals(new BigDecimal("190.00"), allocations.get("BosBankrut"), "Błędna alokacja dla BosBankrut");
+        assertEquals(new BigDecimal("100.00").compareTo(allocations.get("PUNKTY")), 0, "Błędna alokacja dla PUNKTY");
+        assertEquals(new BigDecimal("165.00").compareTo(allocations.get("mZysk")), 0, "Błędna alokacja dla mZysk");
+        assertEquals(new BigDecimal("190.00").compareTo(allocations.get("BosBankrut")), 0, "Błędna alokacja dla BosBankrut");
     }
 
     // Możesz dodać tutaj kolejne testy jednostkowe,

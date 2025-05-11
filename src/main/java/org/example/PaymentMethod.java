@@ -1,5 +1,7 @@
 package org.example;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.math.BigDecimal;
 
 /**
@@ -16,6 +18,8 @@ import java.math.BigDecimal;
  * tą metodą klient otrzyma rabat 10%, a maksymalnie można rozliczyć zamówienia o łącznej wartości
  * nieprzekraczającej 180.00.
  */
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PaymentMethod
 {
         public String id;
